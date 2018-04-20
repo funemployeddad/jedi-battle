@@ -1,0 +1,2 @@
+class SithsController < ApplicationController
+end
