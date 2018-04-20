@@ -29,10 +29,10 @@ class Fight < ActiveRecord::Base
   def start_fight
     new_hp = self.jedi.hp - self.sith.power
     new_strength = self.jedi.strength + self.sith.health
-    self.jedi.update{
+    self.jedi.update(
       :hp => new_hp,
       :strength => new_strength
-    }
+    )
     "You are one with the Force. The Force is one with you."
   end
 
