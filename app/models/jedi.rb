@@ -1,0 +1,2 @@
+class Jedi < ApplicationRecord
+end
