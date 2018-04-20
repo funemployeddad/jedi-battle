@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="center">
+
+  <div class="info">
+    <p><strong>Name:</strong> <%= @sith.name %></p>
+    <p><strong>Strength Requirement:</strong> <%= @sith.health %></p>
+    <p><strong>HP Requirement:</strong> <%= @sith.power %></p>
+
+      <%= form_for @fight do |f| %>
+        <%= f.hidden_field :jedi_id %><br />
+        <%= f.hidden_field :sith_id %><br />
+        <%= f.submit "Battle the Dark Side", class:"btn btn-light" %>
+    <% end %>
+  </div>
+
+</div>

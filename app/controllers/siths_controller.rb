@@ -19,7 +19,6 @@ class SithsController < ApplicationController
 
   def edit
     @sith = Sith.find_by(id: params[:id])
-    @fight = @sith.fights.build(jedi_id:current_jedi.id)
   end
 
   def update

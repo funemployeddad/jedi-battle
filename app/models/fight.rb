@@ -1,4 +1,4 @@
-class Fight < ApplicationRecord
+class Fight < ActiveRecord::Base
   belongs_to :jedi
   belongs_to :sith
 

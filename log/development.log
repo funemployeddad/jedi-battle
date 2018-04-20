@@ -176,3 +176,1637 @@ Migrating to CreateFights (20180420022934)
   [1m[35m (166.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:16:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/thin:23
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (16.0ms)
+Completed 200 OK in 106ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:22:09 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/thin:23
+  
+ArgumentError (Before process_action callback :verify_user_is_authenticated has not been defined):
+  
+app/controllers/static_pages_controller.rb:2:in `<class:StaticPagesController>'
+app/controllers/static_pages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:22:25 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 1362ms (Views: 1360.2ms | ActiveRecord: 0.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:24:12 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/jedis/new" for 127.0.0.1 at 2018-04-19 20:24:17 -0700
+Processing by JedisController#new as HTML
+  Rendering jedis/new.html.erb within layouts/application
+  Rendered jedis/_form.html.erb (66.5ms)
+  Rendered jedis/new.html.erb within layouts/application (67.5ms)
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 119ms (Views: 110.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/jedis" for 127.0.0.1 at 2018-04-19 20:24:37 -0700
+Processing by JedisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eqzZMMIq1o6Jsb4PZP4Ju8haVzdJGFKNd3LAqvSEkOIlH0IvYwtQUkG5Jib1K8nU8qQy5q8k6QlLjFpCKzTYQ==", "jedi"=>{"name"=>"Mace Windu", "hp"=>"8", "strength"=>"5", "password"=>"[FILTERED]"}, "commit"=>"Create Jedi"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jedis_controller.rb:8
+  [1m[36mJedi Create (0.8ms)[0m  [1m[32mINSERT INTO "jedis" ("name", "strength", "hp", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mace Windu"], ["strength", 5], ["hp", 8], ["password_digest", "$2a$10$VVmDfDSfuOoV.1fxUHh3oue/C3IKOMhPC/n1t7D/ebKTlpj/.QogK"], ["created_at", "2018-04-20 03:24:37.250619"], ["updated_at", "2018-04-20 03:24:37.250619"]]
+  ↳ app/controllers/jedis_controller.rb:8
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jedis_controller.rb:8
+Redirected to https://localhost:3000/jedis/2
+Completed 302 Found in 75ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/jedis/2" for 127.0.0.1 at 2018-04-19 20:24:37 -0700
+Processing by JedisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jedis_controller.rb:17
+  Rendering jedis/show.html.erb within layouts/application
+  Rendered jedis/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:24:40 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 53ms (Views: 41.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/siths/1" for 127.0.0.1 at 2018-04-19 20:24:42 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJedi Load (0.4ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.6ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (compile error):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:25:22 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (1.4ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:25:26 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mJedi Load (0.5ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jedis/2" for 127.0.0.1 at 2018-04-19 20:25:33 -0700
+Processing by JedisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (0.4ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mJedi Load (0.4ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jedis_controller.rb:17
+  Rendering jedis/show.html.erb within layouts/application
+  Rendered jedis/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 50ms (Views: 40.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:25:36 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (2.7ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/siths/new" for 127.0.0.1 at 2018-04-19 20:25:39 -0700
+Processing by SithsController#new as HTML
+  [1m[36mJedi Load (0.9ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/new.html.erb within layouts/application
+  Rendered siths/_form.html.erb (6.3ms)
+  Rendered siths/new.html.erb within layouts/application (9.2ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 64ms (Views: 51.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/siths" for 127.0.0.1 at 2018-04-19 20:25:51 -0700
+Processing by SithsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2H4V6eCPXb8v28zsm7Gx83ksXe55bPED4m+wX32UjvNZfzEOO3zjzYJF/TjWzOvFlbrIIAW7S/DcGxiyyliCQ==", "sith"=>{"name"=>"Darth Maul", "power"=>"6", "health"=>"3"}, "commit"=>"Create Sith"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/siths_controller.rb:16
+  [1m[36mSith Create (1.0ms)[0m  [1m[32mINSERT INTO "siths" ("name", "power", "health", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Darth Maul"], ["power", 6], ["health", 3], ["created_at", "2018-04-20 03:25:51.296164"], ["updated_at", "2018-04-20 03:25:51.296164"]]
+  ↳ app/controllers/siths_controller.rb:16
+  [1m[35m (130.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/siths_controller.rb:16
+Redirected to https://localhost:3000/siths/2
+Completed 302 Found in 140ms (ActiveRecord: 131.7ms)
+
+
+Started GET "/siths/2" for 127.0.0.1 at 2018-04-19 20:25:51 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/siths/2" for 127.0.0.1 at 2018-04-19 20:27:36 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/home/josh/code/jedi-battle/app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/siths/2" for 127.0.0.1 at 2018-04-19 20:27:49 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.8ms)
+
+
+  
+SyntaxError (/home/josh/code/jedi-battle/app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/siths/new" for 127.0.0.1 at 2018-04-19 20:27:51 -0700
+Processing by SithsController#new as HTML
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/new.html.erb within layouts/application
+  Rendered siths/_form.html.erb (5.9ms)
+  Rendered siths/new.html.erb within layouts/application (7.1ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started POST "/siths" for 127.0.0.1 at 2018-04-19 20:27:53 -0700
+Processing by SithsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3QKk9SBDOVi8XbekbiK9uTiOKX1W260IhQGUweujQPvAxrpugGaZsySAv2102Cw9mVvFcJ41pekFMMyiFJmS0w==", "sith"=>{"name"=>"Darth Maul", "power"=>"6", "health"=>"3"}, "commit"=>"Create Sith"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/siths_controller.rb:16
+  [1m[36mSith Create (4.5ms)[0m  [1m[32mINSERT INTO "siths" ("name", "power", "health", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Darth Maul"], ["power", 6], ["health", 3], ["created_at", "2018-04-20 03:27:53.870750"], ["updated_at", "2018-04-20 03:27:53.870750"]]
+  ↳ app/controllers/siths_controller.rb:16
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/siths_controller.rb:16
+Redirected to https://localhost:3000/siths/3
+Completed 302 Found in 18ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:27:53 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/josh/code/jedi-battle/app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:28:17 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.2ms)
+
+
+  
+SyntaxError (/home/josh/code/jedi-battle/app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/siths/new" for 127.0.0.1 at 2018-04-19 20:28:19 -0700
+Processing by SithsController#new as HTML
+  [1m[36mJedi Load (0.4ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/new.html.erb within layouts/application
+  Rendered siths/_form.html.erb (11.4ms)
+  Rendered siths/new.html.erb within layouts/application (14.6ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 79ms (Views: 63.6ms | ActiveRecord: 0.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:28:22 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jedis/2" for 127.0.0.1 at 2018-04-19 20:28:23 -0700
+Processing by JedisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJedi Load (1.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mJedi Load (0.5ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jedis_controller.rb:17
+  Rendering jedis/show.html.erb within layouts/application
+  Rendered jedis/show.html.erb within layouts/application (4.7ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 72ms (Views: 59.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:28:25 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.3ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (5.2ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:28:28 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/josh/code/jedi-battle/app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/siths/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:29:00 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (42.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.2ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/views/siths/show.html.erb:7:in `_app_views_siths_show_html_erb___1436602549730768535_92100320'
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:29:10 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.3ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+  Rendering siths/show.html.erb within layouts/application
+  Rendered siths/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     7:     <p><strong>Strength Requirement:</strong> <%= @sith.health %></p>
+     8:     <p><strong>HP Requirement:</strong> <%= @sith.power %></p>
+     9: 
+    10:       <%= form_for @fight do |f| %>
+    11:         <%= f.hidden_field :jedi_id %><br />
+    12:         <%= f.hidden_field :sith_id %><br />
+    13:         <%= f.submit "Battle the Dark Side", class:"btn btn-light" %>
+  
+app/views/siths/show.html.erb:10:in `_app_views_siths_show_html_erb___1436602549730768535_82905180'
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:29:27 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.2ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:29:53 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.5ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:30:43 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.9ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.3ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:30:49 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started DELETE "/session" for 127.0.0.1 at 2018-04-19 20:30:50 -0700
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YhmVcK1KDMgI32Oklmv5/M6gIS/rpIdA8Y6Qf9EZZ9t/3YvrDW+sI5ACa22MkWh4b3XNIiNKj6Fxv8gcLiO18w=="}
+  [1m[36mJedi Load (0.5ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to https://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:30:50 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/signin" for 127.0.0.1 at 2018-04-19 20:30:53 -0700
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT "jedis".* FROM "jedis"[0m
+  ↳ app/views/session/new.html.erb:7
+  Rendered session/new.html.erb within layouts/application (14.7ms)
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-04-19 20:31:00 -0700
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9oelsvlFoVYpeH76S+wkaStvzhsE+yUi50WlZmBnXJOfGnmTENeuMmkzc5I52E6foW3EDSj1iN3Y6dmFsAcg1Q==", "jedi"=>{"name"=>"obi"}, "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."name" = ? LIMIT ?[0m  [["name", "obi"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to https://localhost:3000/jedis/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/jedis/1" for 127.0.0.1 at 2018-04-19 20:31:00 -0700
+Processing by JedisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jedis_controller.rb:17
+  Rendering jedis/show.html.erb within layouts/application
+  Rendered jedis/show.html.erb within layouts/application (0.8ms)
+  [1m[36mCACHE Jedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:31:03 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (4.2ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/siths/1" for 127.0.0.1 at 2018-04-19 20:31:06 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.2ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/siths/1" for 127.0.0.1 at 2018-04-19 20:32:43 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.1ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (compile error):
+  
+app/controllers/siths_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:32:51 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-sprockets"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.0) lib/active_support/logger_silence.rb:21:in `silence'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/usr/local/bin/thin:23:in `load'
+/usr/local/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 20:32:54 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mJedi Load (0.1ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jedis/1" for 127.0.0.1 at 2018-04-19 20:32:55 -0700
+Processing by JedisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mJedi Load (0.2ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jedis_controller.rb:17
+  Rendering jedis/show.html.erb within layouts/application
+  Rendered jedis/show.html.erb within layouts/application (1.8ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/siths" for 127.0.0.1 at 2018-04-19 20:32:57 -0700
+Processing by SithsController#index as HTML
+  [1m[36mJedi Load (0.8ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering siths/index.html.erb within layouts/application
+  [1m[36mSith Load (0.3ms)[0m  [1m[34mSELECT "siths".* FROM "siths"[0m
+  ↳ app/views/siths/index.html.erb:16
+  Rendered siths/index.html.erb within layouts/application (2.8ms)
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE Jedi Load (0.0ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/siths/3" for 127.0.0.1 at 2018-04-19 20:32:59 -0700
+Processing by SithsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJedi Load (0.3ms)[0m  [1m[34mSELECT  "jedis".* FROM "jedis" WHERE "jedis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mSith Load (0.3ms)[0m  [1m[34mSELECT  "siths".* FROM "siths" WHERE "siths"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/siths_controller.rb:7
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+LoadError (Unable to autoload constant Fight, expected /home/josh/code/jedi-battle/app/models/fight.rb to define it):
+  
+app/controllers/siths_controller.rb:8:in `show'

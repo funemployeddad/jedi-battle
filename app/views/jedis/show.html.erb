@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
+<div class="center">
+
+    <p><strong>Name:</strong> <%= @jedi.name %></p>
+    <p><strong>HP:</strong> <%= @jedi.hp %></p>
+    <p><strong>Strength:</strong>  <%= @jedi.strength %></p>
+    <p><%= link_to 'See Sith to battle', siths_path %></p>
+  </div>
+</div>

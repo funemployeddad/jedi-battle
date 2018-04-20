@@ -1,0 +1,44 @@
+<%= form_for @jedi do |f| %>
+  <% if @jedi.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@jedi.errors.count, "error") %> prohibited this jedi from being saved:
+      </h2>
+
+      <ul>
+      <% @jedi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :hp, "Health (scale 1-10)" %>
+    <br>
+    <%= f.number_field :hp, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :strength, "How strong in the Force are you? (1-5 scale)" %>
+    <br>
+    <%= f.number_field :strength, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password, class: "form-control" %>
+
+  <div class="actions">
+    <br/>
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+
+<% end %>
