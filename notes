@@ -2,3 +2,4 @@
 - once logged in, then use the drop-down to select which jedi you want to use
 - make a 'bacta_tank' action in teh jedi controller and then make a partial that is rendered if they click the 'use bacta tank' button on their jedi show page which resets their hp to max
   - ?? make hp a non-enterable item on creation. every jedi starts with the same amount?
+- Add OAuth
