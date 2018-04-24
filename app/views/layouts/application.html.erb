@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JediBattle</title>
+    <title>UserBattle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,12 +16,13 @@
 
        <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
 
-       <% if !current_jedi %>
-         <a class="navbar-brand" href="<%= new_jedi_path %>"/>Sign Up</a>
+       <% if !current_user %>
+         <a class="navbar-brand" href="<%= new_user_path %>"/>Sign Up</a>
          <%= link_to "Log in", signin_path, class:"navbar-brand" %>
+         <%= link_to "Log in with Facebook", '/auth/facebook', class:"navbar-brand" %>
        <% end %>
-       <% if current_jedi %>
-         <%= link_to "#{current_jedi.name}'s profile", jedi_path(current_jedi), class:"navbar-brand"%>
+       <% if current_user %>
+         <%= link_to "#{current_user.name}'s profile", user_path(current_user), class:"navbar-brand"%>
          <%= link_to "Log Out", session_path, class:"navbar-brand",method:'delete' %>
        <% end %>
        </div>

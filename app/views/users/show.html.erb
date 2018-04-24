@@ -1,0 +1,15 @@
+
+<%= form_tag('/session', method: :post) do %>
+
+  <div class="form-group">
+    <%= label_tag(:name, "Jedi name:") %>
+
+    <%= collection_select(:jedi, :name, Jedi.all, :name, :name, prompt: "Please select your Jedi name from this dropdown or create a new Jedi below") %>
+  </div>
+
+
+  <div class="actions">
+    <%= submit_tag("Choose your Jedi") %>
+  </div>
+
+<% end %>
