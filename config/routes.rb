@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/auth/facebook/callback' => 'sessions#create'
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
 
   get '/jedis/new', to: 'jedis#new', as: 'new_jedi'
   get '/jedis', to:'jedis#index', as: 'jedis'
@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   get '/jedis/:id', to: 'jedis#show', as: 'jedi'
   get '/jedis/:id/edit', to: 'jedis#edit', as: 'edit_jedi'
 
-  get '/signin', to: 'session#new', as: 'signin'
-  post '/session', to: 'session#create', as: 'session'
-  delete '/session/', to: 'session#destroy'
+  get '/signin', to: 'sessions#new', as: 'signin'
+  post '/session', to: 'sessions#create', as: 'session'
+  delete '/session/', to: 'sessions#destroy', as: 'logout'
 
   get '/siths', to: 'siths#index', as: 'siths'
   get '/siths/new', to: 'siths#new', as: 'new_sith'
