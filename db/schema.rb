@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_04_25_062053) do
-=======
 ActiveRecord::Schema.define(version: 2018_04_24_011632) do
->>>>>>> 42b567389bf10f82339e6ba4e9588869052eb5c5
 
   create_table "fights", force: :cascade do |t|
     t.integer "jedi_id"
@@ -44,16 +40,11 @@ ActiveRecord::Schema.define(version: 2018_04_24_011632) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-<<<<<<< HEAD
-    t.string "password_digest"
-    t.string "uid"
-=======
     t.string "image"
     t.string "password_digest"
     t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 42b567389bf10f82339e6ba4e9588869052eb5c5
   end
 
 end
