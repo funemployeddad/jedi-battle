@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   patch '/siths/:id', to: 'siths#update'
   post '/siths', to: 'siths#create'
   post '/fights', to:"fights#create", as: 'fights'
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

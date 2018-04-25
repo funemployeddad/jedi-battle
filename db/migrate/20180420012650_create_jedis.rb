@@ -5,6 +5,7 @@ class CreateJedis < ActiveRecord::Migration[5.2]
       t.integer :strength
       t.integer :hp
       t.string :password_digest
+      t.integer :user_id
 
       t.timestamps
     end
