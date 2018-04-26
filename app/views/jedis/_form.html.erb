@@ -1,4 +1,4 @@
-<%= form_for @jedi do |f| %>
+<%= form_for user_jedi_path(current_user, @jedi) do |f| %>
   <% if @jedi.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -20,15 +20,15 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :hp, "Health (scale 1-10)" %>
+    <%= f.label :health, "Health (scale 1-10)" %>
     <br>
-    <%= f.number_field :hp, class: "form-control" %>
+    <%= f.number_field :health, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :strength, "How strong in the Force are you? (1-5 scale)" %>
+    <%= f.label :force_power, "How strong in the Force are you? (1-10 scale)" %>
     <br>
-    <%= f.number_field :strength, class: "form-control" %>
+    <%= f.number_field :force_power, class: "form-control" %>
   </div>
 
   <div class="actions">
