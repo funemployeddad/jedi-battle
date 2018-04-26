@@ -7,7 +7,7 @@ class JedisController < ApplicationController
   def create
     if (jedi = Jedi.create jedi_params)
       session[:jedi_id] = jedi.id
-      redirect_to jedi_path(jedi)
+      redirect_to user_path(current_user)
     else
       render 'new'
     end

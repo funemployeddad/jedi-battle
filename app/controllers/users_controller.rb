@@ -15,8 +15,12 @@ class UsersController < ApplicationController
     end
   end
 
-  # private
-  # def user_params
-  #   params.require(:users).permit(:name, :email, :password, :password_confirmation, :uid, :image)
-  # end
+  def show
+    @jedi = Jedi.new
+  end
+
+  private
+  def user_params
+    params.require(:users).permit(:name, :email, :password, :password_confirmation, :password_digest, :uid, :image)
+  end
 end

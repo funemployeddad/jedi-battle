@@ -22,11 +22,8 @@
          <%= link_to "Log in with Facebook", '/auth/facebook', class:"navbar-brand" %>
        <% end %>
        <% if current_user %>
-<<<<<<< HEAD
          <%= link_to "#{current_user.name}'s profile", user_path(current_user), class:"navbar-brand"%>
-=======
-         <%= link_to "#{current_user.name}'s profile", users_path(current_user), class:"navbar-brand"%>
->>>>>>> 42b567389bf10f82339e6ba4e9588869052eb5c5
+
          <%= link_to "Log Out", session_path, class:"navbar-brand",method:'delete' %>
        <% end %>
        </div>
