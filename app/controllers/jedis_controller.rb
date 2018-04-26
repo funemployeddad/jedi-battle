@@ -21,9 +21,9 @@ class JedisController < ApplicationController
   def jedi_params
     params.require(:jedi).permit(
       :name,
+      :jedi_id,
+      :id,
       :strength,
-      :admin,
-      :password,
       :hp
       )
     end

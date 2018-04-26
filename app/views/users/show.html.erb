@@ -1,36 +1,15 @@
 
-<%= form_tag('/jedis', method: :post) do %>
+<%= form_tag('/jedi/show', method: :post) do %>
 
   <div class="form-group">
     <%= label_tag(:name, "Jedi name:") %>
 
-    <%= collection_select(:jedi, :name, Jedi.all, :name, :name, prompt: "Please select your Jedi name from this dropdown or create a new Jedi below") %>
+    <%= collection_select(:jedi, :id, current_user.jedis.all, :id, :name, prompt: "Please select your Jedi name from this dropdown or create a new Jedi below") %>
   </div>
-
 
     <div class="actions">
       <%= submit_tag("Choose your Jedi") %>
     </div>
-
-
-  <%= form_for(@jedi) do |f| %>
-    <div class="form-group">
-      <%= f.label :name %><br>
-      <%= f.text_field :name, class: "form-control" %></div>
-
-    <div class="form-group">
-      <%= f.label :strength, "Power of the Light Side (scale 1-10)" %><br>
-      <%= f.number_field :strength, class: "form-control" %></div>
-
-    <div class="form-group">
-      <%= f.label :hp, "Health of the Jedi (scale 1-5)" %><br>
-      <%= f.number_field :hp, class: "form-control" %></div>
-
-
-    <div class="actions">
-      <%= f.submit class: "btn btn-primary" %>
-    </div>
-  <% end %>
-
-
 <% end %>
+
+<%= render '/jedis/form' %>
